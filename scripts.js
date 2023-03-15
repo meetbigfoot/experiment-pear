@@ -168,6 +168,9 @@ data.forEach((item) => {
   const name = document.createElement('h2')
   name.innerText = item.name
   card.appendChild(name)
+  const address = document.createElement('small')
+  address.innerText = item.address
+  card.appendChild(address)
   const review = document.createElement('p')
   review.innerText = item.review
   card.appendChild(review)
