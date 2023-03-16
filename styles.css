@@ -40,5 +40,14 @@ body {
   background: white;
   border-radius: 1rem;
   box-shadow: 0px 8px 24px -8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  overflow: hidden;
+}
+.card-image {
+  background-size: cover;
+  flex: 1 100px;
+}
+.card-text {
+  flex: 5;
   padding: 1rem;
 }

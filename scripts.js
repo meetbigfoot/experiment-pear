@@ -2,178 +2,168 @@ const g = document.getElementById.bind(document)
 
 const data = [
   {
-    name: 'Tartine Bakery',
-    latitude: 37.761425,
-    longitude: -122.424104,
-    address: '600 Guerrero St, San Francisco, CA 94110',
+    name: 'Kiraku',
+    latitude: 37.859717,
+    longitude: -122.291273,
+    address: '2566 Telegraph Ave, Berkeley, CA 94704',
+    recommended_rolls: {
+      unique: 'Kiraku Roll',
+      popular: 'Spider Roll',
+    },
+    website: 'https://www.kiraku-berkeley.com/',
+    image:
+      'https://s3-media0.fl.yelpcdn.com/bphoto/mbrS9-YBB8E9GVxbdV-AHg/l.jpg',
     review:
-      'With its legendary morning buns and rustic breads, Tartine Bakery is an iconic San Francisco institution. - Eater SF',
+      "Kiraku is a standout among Berkeley's many sushi restaurants, offering high-quality, creative sushi rolls in a warm and inviting atmosphere. Their Kiraku Roll, with tempura shrimp, crab, and avocado, is a must-try, as is their classic Spider Roll. Highly recommended.",
   },
   {
-    name: 'B. Patisserie',
-    latitude: 37.788549,
-    longitude: -122.440971,
-    address: '2821 California St, San Francisco, CA 94115',
+    name: 'Ippuku',
+    latitude: 37.868908,
+    longitude: -122.266634,
+    address: '2130 Center St, Berkeley, CA 94704',
+    recommended_rolls: {
+      unique: 'Kinoko Roll',
+      popular: 'Spider Roll',
+    },
+    website: 'https://www.ippukuberkeley.com/',
+    image:
+      'https://img.theculturetrip.com/450x/smart/wp-content/uploads/2016/02/Behind-the-counter-%C2%A9-Sharon-Hanh-DarlinFlickr.jpg',
     review:
-      "B. Patisserie's kouign-amann is a must-try, a flaky, buttery pastry that has earned rave reviews. - SF Chronicle",
+      'For an authentic Japanese dining experience in Berkeley, look no further than Ippuku. Their Kinoko Roll, with mushroom tempura and shiso, is a standout among their many sushi offerings, while their Spider Roll remains a perennial favorite. With excellent service and a cozy atmosphere, Ippuku is a must-visit for sushi lovers in the East Bay.',
   },
   {
-    name: 'Arsicault Bakery',
-    latitude: 37.785632,
-    longitude: -122.459545,
-    address: '397 Arguello Blvd, San Francisco, CA 94118',
+    name: 'Sushi Sho',
+    latitude: 37.826435,
+    longitude: -122.253869,
+    address: '1702 Telegraph Ave, Oakland, CA 94612',
+    recommended_rolls: {
+      unique: 'Garlic Albacore Roll',
+      popular: 'Rainbow Roll',
+    },
+    website: 'https://sushishooakland.com/',
+    image:
+      'https://images.squarespace-cdn.com/content/v1/53b0758fe4b0ac0875470ce4/1405403934344-O413E589V8MBZWNAS7ZC/IMG_6116.jpg',
     review:
-      "Arsicault Bakery's croissants have been deemed America's best by Bon Appétit magazine.",
+      'Sushi Sho is a hidden gem in downtown Oakland, offering a range of fresh and flavorful sushi rolls in a low-key, unpretentious atmosphere. Their Garlic Albacore Roll, with albacore, avocado, and garlic mayo, is a standout among their many offerings, while their Rainbow Roll remains a perennial favorite. Highly recommended for sushi lovers looking for a casual, no-frills experience.',
   },
   {
-    name: 'Mr. Holmes Bakehouse',
-    latitude: 37.788643,
-    longitude: -122.418408,
-    address: '1042 Larkin St, San Francisco, CA 94109',
+    name: 'Sushi House',
+    latitude: 37.762041,
+    longitude: -122.240408,
+    address: '2375 Shoreline Dr, Alameda, CA 94501',
+    recommended_rolls: {
+      unique: 'Crazy Horse Roll',
+      popular: 'Dragon Roll',
+    },
+    website: 'https://www.sushihousealameda.com/',
+    image:
+      'https://fastly.4sqi.net/img/general/600x600/LzFTWoWO2BGhYB6AgbWEHB9f4GvNEuAOwDhXWukAFc8.jpg',
     review:
-      'The cruffin, a croissant-muffin hybrid, is the star at Mr. Holmes Bakehouse. - Thrillist',
+      'Sushi House is a top-notch Japanese restaurant in Alameda, with a wide range of sushi options to choose from. Their Crazy Horse Roll, with baked crab, eel, and avocado, is a must-try, while their Dragon Roll remains a favorite among regulars. With excellent service and a sleek, modern atmosphere, Sushi House is a great choice for a special night out.',
   },
   {
-    name: 'b. on the go',
-    latitude: 37.788549,
-    longitude: -122.440971,
-    address: '2794 California St, San Francisco, CA 94115',
+    name: 'Geta Sushi',
+    latitude: 37.802421,
+    longitude: -122.269919,
+    address: '165 41st St, Oakland, CA 94611',
+    recommended_rolls: {
+      unique: 'Ahi Tuna Tower',
+      popular: 'Caterpillar Roll',
+    },
+    website: 'http://www.getasushi.com/',
+    image:
+      'https://media-cdn.tripadvisor.com/media/photo-s/09/43/58/4f/geta-sushi-and-bento.jpg',
     review:
-      'b. on the go is praised for its delectable pressed sandwiches. - SF Eater',
+      'Geta Sushi is a must-visit for sushi lovers in Oakland, with a wide range of delicious and creative sushi rolls to choose from. Their Ahi Tuna Tower, with layers of tuna and avocado, is a standout among their many offerings, while their Caterpillar Roll remains a crowd-pleaser. With friendly service and a laid-back atmosphere, Geta Sushi is a great choice for a casual dinner with friends or family.',
   },
   {
-    name: 'Kantine',
-    latitude: 37.774814,
-    longitude: -122.437192,
-    address: '1906 Market St, San Francisco, CA 94102',
+    name: 'Hana Japan',
+    latitude: 37.76427,
+    longitude: -122.245931,
+    address: '2211 S Shore Center, Alameda, CA 94501',
+    recommended_rolls: {
+      unique: 'Hana Japan Roll',
+      popular: 'Rainbow Roll',
+    },
+    website: 'https://www.hanajapanalameda.com/',
+    image:
+      'https://images.squarespace-cdn.com/content/v1/5e3c98db624cf612084848d9/1581033641738-67GNBVQK19MKEYM0G79T/Hana_Japan25721.JPG',
     review:
-      'Kantine offers excellent smørrebrød, a Scandinavian take on open-faced sandwiches. - San Francisco Magazine',
+      'Hana Japan is a top-notch Japanese restaurant in Alameda, with a wide range of sushi options to choose from. Their Hana Japan Roll, with salmon, avocado, and spicy mayo, is a must-try, while their Rainbow Roll remains a favorite among regulars. With excellent service and a sleek, modern atmosphere, Hana Japan is a great choice for a special night out.',
   },
   {
-    name: 'Neighbor Bakehouse',
-    latitude: 37.760203,
-    longitude: -122.388719,
-    address: '2343 3rd St, San Francisco, CA 94107',
+    name: "Yoshi's",
+    latitude: 37.799307,
+    longitude: -122.268963,
+    address: '510 Embarcadero W, Oakland, CA 94607',
+    recommended_rolls: {
+      unique: "Yoshi's Roll",
+      popular: 'Caterpillar Roll',
+    },
+    website: 'https://www.yoshis.com/oakland/restaurant',
+    image:
+      'https://d1ralsognjng37.cloudfront.net/71bef932-395b-4945-823d-bb9aebb3b1d3.jpeg',
     review:
-      "Neighbor Bakehouse's ginger pull-apart bread is a standout favorite. - SF Weekly",
+      "Yoshi's is a Japanese restaurant located in Oakland's Jack London Square, offering a range of sushi rolls and other Japanese dishes. Their Yoshi's Roll, with crab, avocado, and eel, is a standout among their many offerings, while their Caterpillar Roll remains a perennial favorite. With live music and a vibrant atmosphere, Yoshi's is a great choice for a night out with friends or a special occasion.",
   },
   {
-    name: 'Craftsman and Wolves',
-    latitude: 37.760487,
-    longitude: -122.421591,
-    address: '746 Valencia St, San Francisco, CA 94110',
+    name: 'Kansai',
+    latitude: 37.952167,
+    longitude: -122.042243,
+    address: '4390 Treat Blvd, Concord, CA 94521',
+    recommended_rolls: {
+      unique: 'Kansai Roll',
+      popular: 'California Roll',
+    },
+    website: 'http://kansaiconcord.com/',
+    image:
+      'https://tb-static.uber.com/prod/image-proc/processed_images/39a1e9e103ff2870dab60ebe17b72787/3ac2b39ad528f8c8c5dc77c59abb683d.jpeg',
     review:
-      'The Rebel Within, a savory muffin with a soft egg inside, is the signature creation at Craftsman and Wolves. - SF Chronicle',
+      'Kansai is a Japanese restaurant located in Concord, offering a range of sushi rolls and other Japanese dishes. Their Kansai Roll, with spicy tuna, cucumber, and jalapeño, is a must-try, while their California Roll remains a popular choice. With excellent service and a welcoming atmosphere, Kansai is a great choice for a casual dinner with friends or family.',
   },
   {
-    name: 'Noe Valley Bakery',
-    latitude: 37.751986,
-    longitude: -122.428646,
-    address: '4073 24th St, San Francisco, CA',
+    name: 'Ohgane',
+    latitude: 37.814101,
+    longitude: -122.265969,
+    address: '3915 Broadway, Oakland, CA 94611',
+    recommended_rolls: {
+      unique: 'Ohgane Roll',
+      popular: 'Spider Roll',
+    },
+    website: 'http://www.ohgane.com/',
+    image: 'https://resizer.otstatic.com/v2/photos/xlarge/1/24807335.jpg',
     review:
-      'The chocolate salted caramel cupcake at Noe Valley Bakery is a perfect balance of sweet and salty, making it a must-try for dessert lovers. - Eater SF',
-  },
-  {
-    name: 'Thorough Bread and Pastry',
-    latitude: 37.763214,
-    longitude: -122.430788,
-    address: '248 Church St, San Francisco, CA 94114',
-    review:
-      "Thorough Bread and Pastry's almond bear claw is a crowd favorite. - SF Weekly",
-  },
-  {
-    name: 'Marla Bakery',
-    latitude: 37.780078,
-    longitude: -122.490236,
-    address: '3619 Balboa St, San Francisco, CA 94121',
-    review:
-      'The rosemary and potato flatbread is a must-try at Marla Bakery. - SF Magazine',
-  },
-  {
-    name: 'La Boulangerie de San Francisco',
-    latitude: 37.798612,
-    longitude: -122.407055,
-    address: '222 Sutter St, San Francisco, CA 94108',
-    review:
-      'La Boulangerie de San Francisco offers a delightful almond croissant. - Eater SF',
-  },
-  {
-    name: "Devil's Teeth Baking Company",
-    latitude: 37.751417,
-    longitude: -122.508031,
-    address: '3876 Noriega St, San Francisco, CA 94122',
-    review:
-      "The beignets at Devil's Teeth Baking Company are not to be missed. - SF Chronicle",
-  },
-  {
-    name: 'Jane The Bakery',
-    latitude: 37.767219,
-    longitude: -122.428962,
-    address: '1881 Geary Blvd, San Francisco, CA 94115',
-    review: 'The cinnamon roll at Jane The Bakery is a must-try. - SF Eater',
-  },
-  {
-    name: "Schubert's Bakery",
-    latitude: 37.782908,
-    longitude: -122.460435,
-    address: '521 Clement St, San Francisco, CA 94118',
-    review:
-      "The Swedish Princess Cake is a Schubert's Bakery classic. - SF Magazine",
-  },
-  {
-    name: 'The Midwife and The Baker',
-    latitude: 37.373194,
-    longitude: -122.030181,
-    address: '846 Independence Ave, Mountain View, CA 94043',
-    review:
-      "The Midwife and The Baker's sprouted wheat bread is a standout offering. - Eater SF",
-  },
-  {
-    name: "Dianda's Italian American Pastry",
-    latitude: 37.742436,
-    longitude: -122.422853,
-    address: '2883 Mission St, San Francisco, CA 94110',
-    review:
-      "The Italian rum cake at Dianda's Italian American Pastry is not to be missed. - SF Chronicle",
-  },
-  {
-    name: 'Breadbelly',
-    latitude: 37.780078,
-    longitude: -122.490236,
-    address: '1408 Clement St, San Francisco, CA 94118',
-    review:
-      "Breadbelly's kaya toast is a unique and delicious combination of sweet and savory flavors that has quickly become a local favorite. - SF Chronicle",
-  },
-  {
-    name: 'Fournée Bakery',
-    latitude: 37.857097,
-    longitude: -122.253152,
-    address: '2912 Domingo Ave, Berkeley, CA 94705',
-    review:
-      'The ham and cheese croissant at Fournée Bakery is a must-try. - SF Chronicle',
-  },
-  {
-    name: '20th Century Cafe',
-    latitude: 37.776548,
-    longitude: -122.422986,
-    address: '198 Gough St, San Francisco, CA 94102',
-    review:
-      'The Russian honey cake at 20th Century Cafe is a standout favorite. - Eater SF',
+      'Ohgane is a popular Korean BBQ restaurant in Oakland that also offers sushi. Their Ohgane Roll, with spicy tuna and avocado, is a unique and flavorful sushi roll that is definitely worth trying, while their Spider Roll remains a popular choice. With its lively atmosphere and friendly service, Ohgane is a great choice for a casual night out with friends or family.',
   },
 ]
 
 data.forEach((item) => {
   const card = document.createElement('div')
   card.className = 'card'
+  const image = document.createElement('div')
+  image.className = 'card-image'
+  image.style.backgroundImage = `url(${item.image})`
+  card.appendChild(image)
+  const text = document.createElement('div')
+  text.className = 'card-text'
   const name = document.createElement('h2')
   name.innerText = item.name
-  card.appendChild(name)
+  text.appendChild(name)
   const address = document.createElement('small')
   address.innerText = item.address
-  card.appendChild(address)
+  text.appendChild(address)
   const review = document.createElement('p')
   review.innerText = item.review
-  card.appendChild(review)
+  text.appendChild(review)
+  const stats = document.createElement('div')
+  const stat1 = document.createElement('div')
+  stat1.innerHTML = `<b>Most unique roll</b> ${item.recommended_rolls.unique}`
+  const stat2 = document.createElement('div')
+  stat2.innerHTML = `<b>Most popular roll</b> ${item.recommended_rolls.popular}`
+  stats.appendChild(stat1)
+  stats.appendChild(stat2)
+  text.appendChild(stats)
+  card.appendChild(text)
   g('list').appendChild(card)
 })
 
@@ -189,7 +179,7 @@ function initMap() {
       renderMap()
     },
     (e) => {
-      coords = [-122.45, 37.77]
+      coords = [-122.27, 37.8]
       renderMap()
     },
   )
