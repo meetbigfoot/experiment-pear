@@ -2,56 +2,51 @@ const g = document.getElementById.bind(document)
 
 const data = [
   {
-    name: 'Milwaukee Public Museum',
+    name: 'LEGOLAND Discovery Center',
     image:
-      'https://www.milwaukeemag.com/wp-content/uploads/2022/07/05-Commons_05-scaled.jpg',
-    latitude: 43.040613,
-    longitude: -87.920495,
+      'https://mallmaverick.imgix.net/web/property_managers/1/properties/727/stores/legoland_discovery_center/20200316203204/_asset_get_97929',
+    address: '4240 Baldwin Rd, Auburn Hills, MI 48326',
+    latitude: 42.701848,
+    longitude: -83.303547,
+    description:
+      'A fantastic experience for LEGO enthusiasts of all ages, featuring interactive play areas, building stations, and a 4D cinema.',
   },
   {
-    name: 'Milwaukee County Zoo',
+    name: 'Pine Knob Ski Resort',
     image:
-      'https://www.travelwisconsin.com/uploads/places/4f/4ff458ad-e148-486a-ad43-9ba9312166bf-elephants-in-pool-07-2021-37-e.jpg',
-    latitude: 43.031288,
-    longitude: -88.040855,
+      'https://www.pineknobskischool.com/uploads/1/2/3/3/123378924/pk-resort-26_1_orig.jpg',
+    address: '7778 Sashabaw Rd, Clarkston, MI 48348',
+    latitude: 42.72044,
+    longitude: -83.368997,
+    description:
+      'An excellent spot for skiing with young children, offering ski and snowboard lessons, and a variety of slopes and terrain.',
   },
   {
-    name: 'Discovery World',
-    image: 'https://govalleykids.com/wp-content/uploads/2018/04/IMG_2908.jpg',
-    latitude: 43.036859,
-    longitude: -87.897454,
+    name: "Carl's Golfland",
+    image: 'https://i.ytimg.com/vi/A1BIZchsgZ8/maxresdefault.jpg',
+    address: '1975 S Telegraph Rd, Bloomfield Hills, MI 48302',
+    latitude: 42.612218,
+    longitude: -83.300469,
+    description:
+      'A golfing experience for all skill levels, providing a driving range, putting greens, a pro shop, and golf lessons.',
   },
   {
-    name: 'Mitchell Park Horticultural Conservatory (The Domes)',
+    name: 'Youmacon',
     image:
-      'https://www.gannett-cdn.com/presto/2019/03/11/PMJS/e1125c1d-98d3-4771-9368-1d02b901bcee-MJS_domes_5_hoffman.jpg_domes.JPG',
-    latitude: 43.025793,
-    longitude: -87.947079,
+      'https://www.mlive.com/resizer/yRRdhD3dIykaRXuDhABLp_07kIY=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/entertainment_impact/photo/25001171-standard.jpg',
+    address: '1 Washington Blvd, Detroit, MI 48226',
+    latitude: 42.326665,
+    longitude: -83.052409,
+    description:
+      'An annual anime, gaming, and pop culture convention with panels, workshops, gaming tournaments, and cosplay events.',
   },
   {
-    name: "Betty Brinn Children's Museum",
-    latitude: 43.038927,
-    longitude: -87.897657,
-  },
-  {
-    name: 'Milwaukee Art Museum',
-    latitude: 43.040243,
-    longitude: -87.897607,
-  },
-  {
-    name: 'Boerner Botanical Gardens',
-    latitude: 42.941104,
-    longitude: -88.008705,
-  },
-  {
-    name: 'Historic Third Ward',
-    latitude: 43.033116,
-    longitude: -87.908005,
-  },
-  {
-    name: 'Urban Ecology Center',
-    latitude: 43.05947,
-    longitude: -87.899935,
+    name: 'Bloomfield Township Public Library',
+    address: '1099 Lone Pine Rd, Bloomfield Township, MI 48302',
+    latitude: 42.583191,
+    longitude: -83.281824,
+    description:
+      "A library that hosts author events, book clubs, and children's programs, catering to fans of sci-fi and fantasy novels.",
   },
 ]
 
@@ -77,9 +72,9 @@ data.forEach((item) => {
   directions.innerText = 'Get directions'
   top.appendChild(directions)
   text.appendChild(top)
-  // const review = document.createElement('p')
-  // review.innerText = item.review
-  // text.appendChild(review)
+  const review = document.createElement('p')
+  review.innerText = item.description
+  text.appendChild(review)
   card.appendChild(text)
   g('list').appendChild(card)
 })
@@ -96,7 +91,7 @@ function initMap() {
       renderMap()
     },
     (e) => {
-      coords = [-87.9, 43.04]
+      coords = [-83.25, 42.58]
       renderMap()
     },
   )
