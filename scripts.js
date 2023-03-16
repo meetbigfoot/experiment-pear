@@ -42,6 +42,8 @@ const data = [
   },
   {
     name: 'Bloomfield Township Public Library',
+    image:
+      'https://lh3.googleusercontent.com/p/AF1QipPuxiTTFvcldwifh6dAWfDLI1UZtDZ0f4rnqJfD=s1360-w1360-h1020',
     address: '1099 Lone Pine Rd, Bloomfield Township, MI 48302',
     latitude: 42.583191,
     longitude: -83.281824,
