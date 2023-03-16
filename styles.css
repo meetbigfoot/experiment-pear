@@ -48,6 +48,41 @@ body {
   flex: 1 100px;
 }
 .card-text {
-  flex: 5;
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  gap: 0.5rem;
   padding: 1rem;
+}
+.card-top {
+  align-items: center;
+  display: flex;
+}
+.card-name {
+  flex: 1;
+}
+.card-top a {
+  color: inherit;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.card-top a:hover {
+  text-decoration: underline;
+}
+.card-stats {
+  display: flex;
+  gap: 1rem;
+}
+.card-stat1,
+.card-stat2 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.card-stats b {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  opacity: 0.5;
+  text-transform: uppercase;
 }

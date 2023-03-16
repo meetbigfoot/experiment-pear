@@ -146,20 +146,30 @@ data.forEach((item) => {
   card.appendChild(image)
   const text = document.createElement('div')
   text.className = 'card-text'
+  const top = document.createElement('div')
+  top.className = 'card-top'
   const name = document.createElement('h2')
+  name.className = 'card-name'
   name.innerText = item.name
-  text.appendChild(name)
-  const address = document.createElement('small')
-  address.innerText = item.address
-  text.appendChild(address)
+  top.appendChild(name)
+  const directions = document.createElement('a')
+  directions.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    item.address,
+  )}`
+  directions.innerText = 'Get directions'
+  top.appendChild(directions)
+  text.appendChild(top)
   const review = document.createElement('p')
   review.innerText = item.review
   text.appendChild(review)
   const stats = document.createElement('div')
+  stats.className = 'card-stats'
   const stat1 = document.createElement('div')
-  stat1.innerHTML = `<b>Most unique roll</b> ${item.recommended_rolls.unique}`
+  stat1.className = 'card-stat1'
+  stat1.innerHTML = `<b>Most unique</b> ${item.recommended_rolls.unique}`
   const stat2 = document.createElement('div')
-  stat2.innerHTML = `<b>Most popular roll</b> ${item.recommended_rolls.popular}`
+  stat2.className = 'card-stat2'
+  stat2.innerHTML = `<b>Most popular</b> ${item.recommended_rolls.popular}`
   stats.appendChild(stat1)
   stats.appendChild(stat2)
   text.appendChild(stats)
