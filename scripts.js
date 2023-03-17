@@ -2,53 +2,54 @@ const g = document.getElementById.bind(document)
 
 const data = [
   {
-    name: 'LEGOLAND Discovery Center',
+    name: 'Visit Koreana Plaza',
     image:
-      'https://mallmaverick.imgix.net/web/property_managers/1/properties/727/stores/legoland_discovery_center/20200316203204/_asset_get_97929',
-    address: '4240 Baldwin Rd, Auburn Hills, MI 48326',
-    latitude: 42.701848,
-    longitude: -83.303547,
-    description:
-      'A fantastic experience for LEGO enthusiasts of all ages, featuring interactive play areas, building stations, and a 4D cinema.',
+      'https://lh3.googleusercontent.com/p/AF1QipO6o8F8knbtOd7lnuBZNq8DT6uFBev-sHFOmoEF=s1360-w1360-h1020',
+    address: '2370 Telegraph Ave, Oakland, CA 94612',
+    latitude: 37.813575,
+    longitude: -122.267254,
+    reason:
+      'Delight in exploring the aisles filled with Korean ingredients and discover new flavors to elevate your home-cooked meals.',
   },
   {
-    name: 'Pine Knob Ski Resort',
+    name: 'Explore the UC Berkeley campus',
     image:
-      'https://www.pineknobskischool.com/uploads/1/2/3/3/123378924/pk-resort-26_1_orig.jpg',
-    address: '7778 Sashabaw Rd, Clarkston, MI 48348',
-    latitude: 42.72044,
-    longitude: -83.368997,
-    description:
-      'An excellent spot for skiing with young children, offering ski and snowboard lessons, and a variety of slopes and terrain.',
+      'https://d3qvqlc701gzhm.cloudfront.net/thumbs/72faedaefe8cc6a5d08cf0b61e83813441db0f754d1077429eb0b777e53dbba3-750.jpg',
+    address: 'Berkeley, CA 94720',
+    latitude: 37.871853,
+    longitude: -122.258423,
+    reason:
+      'Stroll through the picturesque campus, surrounded by the unique blend of academic spirit and historical charm.',
   },
   {
-    name: "Carl's Golfland",
-    image: 'https://i.ytimg.com/vi/A1BIZchsgZ8/maxresdefault.jpg',
-    address: '1975 S Telegraph Rd, Bloomfield Hills, MI 48302',
-    latitude: 42.612218,
-    longitude: -83.300469,
-    description:
-      'A golfing experience for all skill levels, providing a driving range, putting greens, a pro shop, and golf lessons.',
+    name: 'Attend a Golden State Warriors game',
+    image:
+      'https://images.ctfassets.net/0lzgl3qjkmm1/8IXq9IhcwPQCX0qcVnMx7/153f7a46c48644add64f7f14ddbc7706/cc-groups-1080.png',
+    address: 'Chase Center, 1 Warriors Way, San Francisco, CA 94158',
+    latitude: 37.767998,
+    longitude: -122.387694,
+    reason:
+      'Feel the adrenaline rush as you join fellow fans in cheering on the Warriors in their pursuit of victory.',
   },
   {
-    name: 'Youmacon',
+    name: 'Visit the Oakland Museum of California',
     image:
-      'https://www.mlive.com/resizer/yRRdhD3dIykaRXuDhABLp_07kIY=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/entertainment_impact/photo/25001171-standard.jpg',
-    address: '1 Washington Blvd, Detroit, MI 48226',
-    latitude: 42.326665,
-    longitude: -83.052409,
-    description:
-      'An annual anime, gaming, and pop culture convention with panels, workshops, gaming tournaments, and cosplay events.',
+      'https://museumca.org/wp-content/uploads/2022/09/2022_OMCA_LunarNewYear_Entrance_Line_Visitors_Photocredit_ChristineCueto_DSF0560.jpg',
+    address: '1000 Oak St, Oakland, CA 94607',
+    latitude: 37.798599,
+    longitude: -122.26421,
+    reason:
+      "Lose yourself in the captivating stories of California's past while enjoying a leisurely and educational day out.",
   },
   {
-    name: 'Bloomfield Township Public Library',
+    name: 'Tour historic Old Oakland',
     image:
-      'https://lh3.googleusercontent.com/p/AF1QipPuxiTTFvcldwifh6dAWfDLI1UZtDZ0f4rnqJfD=s1360-w1360-h1020',
-    address: '1099 Lone Pine Rd, Bloomfield Township, MI 48302',
-    latitude: 42.583191,
-    longitude: -83.281824,
-    description:
-      "A library that hosts author events, book clubs, and children's programs, catering to fans of sci-fi and fantasy novels.",
+      'https://bdearch.com/assets/img/featured_img/old-oakland-architecture_featured.jpg',
+    address: 'Old Oakland, Oakland, CA 94607',
+    latitude: 37.801231,
+    longitude: -122.274569,
+    reason:
+      'Experience the charm of yesteryear as you meander through the enchanting Victorian-lined streets of Old Oakland.',
   },
 ]
 
@@ -75,7 +76,7 @@ data.forEach((item) => {
   top.appendChild(directions)
   text.appendChild(top)
   const review = document.createElement('p')
-  review.innerText = item.description
+  review.innerText = item.reason
   text.appendChild(review)
   card.appendChild(text)
   g('list').appendChild(card)
@@ -93,7 +94,7 @@ function initMap() {
       renderMap()
     },
     (e) => {
-      coords = [-83.25, 42.58]
+      coords = [-122.29, 37.83]
       renderMap()
     },
   )
