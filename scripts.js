@@ -51,6 +51,26 @@ const data = [
     reason:
       'Experience the charm of yesteryear as you meander through the enchanting Victorian-lined streets of Old Oakland.',
   },
+  {
+    name: 'Kingston 11 Cuisine',
+    image:
+      'https://duyt4h9nfnj50.cloudfront.net/resized/1537211574272-w2880-87.jpg',
+    address: '2270 Telegraph Ave, Oakland, CA 94612',
+    latitude: 37.813388,
+    longitude: -122.267158,
+    reason:
+      'Treat yourself to a fusion of flavors by trying the delicious Korean-Jamaican dishes at this unique and innovative restaurant.',
+  },
+  {
+    name: 'Rosie the Riveter WWII Home Front National Historical Park',
+    image:
+      'https://drupal8-prod.visitcalifornia.com/sites/drupal8-prod.visitcalifornia.com/files/styles/fluid_1200/public/vc_rosietheriveterworldwariihomefront_su_nps_2ad01d77_1280x640.jpg?itok=T-F5l8dE',
+    address: '1414 Harbour Way S #3000, Richmond, CA 94804',
+    latitude: 37.916998,
+    longitude: -122.365487,
+    reason:
+      'Immerse yourself in the inspiring stories of the WWII home front by visiting this historical park in Richmond, which played a vital role in wartime production.',
+  },
 ]
 
 data.forEach((item) => {
